@@ -3,6 +3,7 @@
 
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.Edge;
 using System;
 using System.Threading;
 
@@ -13,9 +14,9 @@ namespace selenium
         static void Main(string[] args)
         {
             // FirefoxBinary binary = new FirefoxBinary();
-            FirefoxOptions options = new FirefoxOptions();//optional
-            options.BrowserExecutableLocation = @"C:\Program Files\Mozilla Firefox\firefox.exe";
-            IWebDriver driver = new FirefoxDriver(@"C:\tools\Webdrivers", options);
+            //EdgeOptions options = new EdgeOptions();
+            //options. = @"C:\Program Files\Mozilla Firefox\firefox.exe";
+            IWebDriver driver = new EdgeDriver(@"C:\tools\Webdrivers");
 
             driver.Navigate().GoToUrl("https://www.google.com");
             driver.FindElement(By.Id("W0wltc")).Click();
